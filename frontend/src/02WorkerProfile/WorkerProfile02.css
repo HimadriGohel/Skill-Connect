@@ -1,0 +1,489 @@
+/* / common css /  */
+* {
+    outline: none !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  
+}
+
+ul,
+ol {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li,
+ol li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+/* a,
+a:hover,
+a:focus,
+a:active {
+    outline: none !important;
+    text-decoration: none;
+    color: #5B8C5A;
+} */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+body {
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.worker-profile-color {
+    color: #222325;
+}
+
+.gap {
+    gap: 17px;
+    align-items: flex-start !important;
+}
+
+.worker-info-image img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+.hiring-profile-container {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.worker-info-main-left {
+    width: 889px;
+    gap: 35px;
+    align-items: flex-start !important;
+}
+
+.worker-info-section {
+    align-items: flex-start !important;
+    justify-content: space-around;
+}
+
+
+
+.fullname {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: #222325;
+}
+
+.username {
+    font-size: 17px;
+    line-height: 26px;
+    color: grey;
+    margin-bottom: 0;
+}
+
+.info-proffesion p {
+    margin-bottom: 0;
+}
+
+.info-language p {
+    margin-bottom: 0;
+}
+
+.info-name {
+    gap: 10px;
+}
+
+.top-rated {
+    background-color: #ffe5b4;
+    color: #774c2b;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.stars {
+    color: #774c2b;
+    font-size: 14px;
+}
+
+.worker-about-section {
+    width: 1200px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 1px 2px 2px 2px white;
+    
+}
+
+.info-right {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.info-right-contact {
+    gap: 10px;
+    align-items: center;
+}
+
+.info-rating-count span {
+    font-size: 17px;
+}
+
+.worker-head {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.about-info p {
+    color: #404145;
+    line-height: 1.5em;
+}
+
+.worker-skill-section {
+  padding: 15px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px 2px white;
+  margin-top: 20px;
+}
+
+.skill-list ul {
+    padding: 5px;
+    gap: 10px;
+}
+
+.skill-list ul li {
+    padding: 7px 10px;
+    border: 1px solid;
+    background-color: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 20px;
+}
+
+.skill-list ul li:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+
+.customer-review-section {
+    margin-top: 20px;
+background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px 2px white;
+  padding: 20px;
+}
+
+
+.review-card {
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #a67c52;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.repeat-client {
+    font-size: 14px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.flag {
+    width: 16px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.rating {
+    font-size: 18px;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+.time {
+    color: gray;
+    font-size: 14px;
+}
+
+.review-text {
+    color: #404145;
+    line-height: 1.5em;
+    font-size: 17px;
+}
+
+.price-duration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.category {
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.category img {
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.seller-response {
+    background: #e8f5e9;
+    padding: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffaa33;
+    border-radius: 5px;
+}
+
+.worker-rating-section {
+ background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px 2px white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.progress {
+    width: 303px;
+}
+
+.progress-bar {
+    height: 15px !important;
+    width: 150px;
+}
+
+.rating-main {
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-count p {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.rating-name p {
+    font-weight: 600;
+}
+
+.hire-btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 12px 20px;
+    background-color: #ffaa33;
+    color: white !important;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.small {
+    font-size: 15px;
+}
+
+.worker-about-main {
+    color: #404145;
+    line-height: 1.5em;
+    word-break: break-word;
+    font-size: 17px;
+}
+
+.skill-list ul li {
+    padding: 7px 10px;
+    border: 1px solid;
+    background-color: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 20px;
+}
+
+.rating-main-div {
+    flex-direction: column;
+    gap: 12px;
+    align-items: start !important;
+}
+
+.rating-main:first-child {
+    margin-top: 15px;
+}
+
+
+.f-weight {
+    font-weight: 500;
+}
+
+.price-duration p {
+    font-size: 17px;
+}
+
+
+.worker-info-section{
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px 2px white;
+}
+
+
+
+.hiring-profile-container::before {
+    content: '';
+    background-image: url('../images/backgroundimg.png');
+    background-size: cover;
+    background-position: bottom;
+    position: absolute; /* Or relative based on your layout */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Make sure it stays at the bottom */
+    height: 100%; /* Adjust height based on layout */
+    z-index: -1; /* Behind other content */
+}
+
+.customer-review-section::before{
+
+    content: '';
+    background-image: url('../images/backgroundimg.png');
+    background-size: cover;
+    background-position: bottom;
+    position: absolute; /* Or relative based on your layout */
+    top:100%;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Make sure it stays at the bottom */
+    height: 100%; /* Adjust height based on layout */
+    z-index: -1; /* Behind other content */
+
+}
+
+
+@media (max-width: 992px) {
+
+    .worker-info-section {
+        flex-direction: column;
+    }
+
+    .worker-info-main-left,
+    .worker-info-main-right {
+        width: 100%;
+    }
+
+    .worker-info-main-right {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+
+    .hire-btn {
+        width: 100%;
+    }
+
+    .price-duration {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .worker-info-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .worker-info-main-left {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .fullname {
+        font-size: 20px;
+    }
+
+    .worker-head {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .worker-about-main,
+    .review-text,
+    .price-duration p {
+        font-size: 14px;
+    }
+
+    .info-right-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .rating-main {
+        flex-direction: column;
+        /* align-items: flex-start; */
+    }
+}

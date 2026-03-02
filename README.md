@@ -1,4 +1,4 @@
-# 🔍 Look for Worker
+# 🔍 Skill Connect
 
 **Look for Worker** is a full-stack web application that connects customers with skilled workers like carpenters, painters, electricians, and more. Workers can register themselves on the platform and be hired on an hourly pay basis. The website offers user-friendly features for both workers and customers, including profile management, filters, support, and secure authentication.
 

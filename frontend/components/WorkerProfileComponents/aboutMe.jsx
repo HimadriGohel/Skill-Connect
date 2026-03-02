@@ -24,11 +24,11 @@ const AboutMeBox = ({ }) => {
   return (
     <div className="card card-primary">
       <div className="card-header">
-        <h3 className="card-title">ABOUT PROFILE</h3>
+        <h3 className="card-title">About Profile</h3>
       </div>
       <div className="card-body">
         <strong>
-          <i className="fas fa-book mr-1"></i> PERSONAL INFORMATION
+          <i className="fas fa-book mr-1"></i> Personal Details
         </strong>
         <ul className="list-group list-group-unbordered">
           <li className="list-group-item child-upper text-muted">
@@ -44,7 +44,7 @@ const AboutMeBox = ({ }) => {
 
         <hr />
         <strong>
-          <i className="fas fa-map-marker-alt mr-1"></i> LOCATION
+          <i className="fas fa-map-marker-alt mr-1"></i> Location
         </strong>
         <ul className="text-muted list-group list-group-unbordered">
           <li className="text-muted list-group-item child-upper mb-0 pb-1">
@@ -57,7 +57,7 @@ const AboutMeBox = ({ }) => {
 
         <hr />
         <strong>
-          <i className="fas fa-pencil-alt mr-1"></i> WORK STATISTICS
+          <i className="fas fa-pencil-alt mr-1"></i> Work Stastics
         </strong>
         <ul className="text-muted list-group list-group-unbordered">
           <li className="list-group-item child-upper text-muted">
@@ -70,7 +70,7 @@ const AboutMeBox = ({ }) => {
 
         <hr />
         <strong>
-          <i className="far fa-file-alt mr-1"></i> BIO
+          <i className="far fa-file-alt mr-1"></i> Bio
         </strong>
         <p className="text-muted">{worker.workerDetails}</p>
       </div>

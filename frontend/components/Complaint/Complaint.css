@@ -1,0 +1,59 @@
+
+.support-ticket{
+    margin-bottom: 100px;
+  }
+  .ticket-content{
+    background-color: #fff;
+    box-shadow: 0 0 35px 8px rgba(0,0,0,0.2);
+    padding: 20px 35px;
+    margin-block: 40px;
+  }
+  .ticket-content-header{
+    gap: 15px;
+  }
+  .ticket-content-header a{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    padding: 7px 10px;
+  }
+  #subject-label, #description-label, #attachments-label {
+    text-align: start;
+    width: 100%;
+    padding: 6px 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+ 
+  .form-subject{
+    flex-direction: column;
+    padding-top: 25px;
+    padding-inline:15px;
+    display: flex;
+  }
+  #subject , #description , #attachments {
+    width: 100%;
+    padding: 15px 10px;
+    outline: none;
+  }
+
+.choose-file{
+    border: 1px solid;
+}
+.ticket-btn {
+    padding: 35px 15px;
+}
+.upload-criteria{
+    font-size: 1rem;
+    color: grey;
+    padding: 5px 0;
+    text-align: start;
+    width: 100%;
+}
+.container{
+    max-width: 1180px;
+    margin: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+}

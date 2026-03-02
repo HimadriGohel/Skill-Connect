@@ -1,0 +1,16 @@
+
+
+
+.banner-text {
+    color: white !important;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.top-banner {
+    background-image: url(../assets/asset-32.png);
+    background-color: #4fb3d4;
+    background-size: 300px;
+
+}

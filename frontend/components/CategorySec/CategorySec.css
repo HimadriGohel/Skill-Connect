@@ -1,0 +1,36 @@
+
+
+.category-section {
+    padding: 80px var(--padding-inline-section);
+
+
+}
+
+.category-header {
+    text-align: center;
+
+}
+
+.category-image {
+    height: 2.25rem;
+
+}
+
+.category-box {
+    flex-wrap: wrap;
+    margin-top: 55px;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.c-box {
+    /* max-width:30%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    flex-basis: 22%;
+    cursor: pointer;
+}

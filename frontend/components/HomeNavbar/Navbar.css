@@ -1,0 +1,106 @@
+/* Basic styling for the navbar */
+
+
+.navbar {
+  padding-block: 10px;
+  background-color: white;
+  /* Add a background color to the navbar */
+}
+
+.hover-links {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.hover-links:hover {
+  color: #ff9502;
+  transition: 0.2s ease-out;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Vertically align items in the center */
+}
+
+.logo-image img {
+  width: 149px;
+  height: auto;
+}
+
+/* Navigation links styling */
+.nav-links ul {
+  display: flex;
+  gap: 40px;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-links ul li {
+  text-decoration: none;
+}
+
+.secondary-btn {
+  border: 1px solid var(--secondary-text-color);
+  padding: 10px 24px;
+  font-weight: 700;
+  color: var(--primary-text-color) !important;
+  border-radius: 5px;
+  transition: 0.2s ease-out;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  border: 1px solid #ff9502;
+  color: #ff9502 !important;
+}
+
+/* Styling for the mobile toggle button (hamburger) */
+.nav-toggle {
+   display: none; 
+  /* Hidden by default, will be shown in mobile */
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-toggle img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .secondary-btn {
+    padding: 8px 16px;
+  }
+}

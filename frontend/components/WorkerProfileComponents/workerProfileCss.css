@@ -1,0 +1,185 @@
+/* .active {
+    color: #fff;
+    background-color: #007bff;
+} */
+
+.nav-link {
+    color: #6c757d;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #ff9502;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.25rem rgba(255, 149, 2, 0.25); */
+    box-shadow: none;
+}
+
+
+.child-bottom {
+    border-bottom: none;
+}
+
+.child-upper {
+    border-top: none;
+}
+#edit{
+    position: absolute;
+    top:110px;
+    left:63%;
+    color: white;
+    background-color:#ffaa33;
+    border-radius: 6px;
+    padding: 1px;
+}
+
+#person{
+    background-color:  #CCE6FF;
+    color: #0000cc;
+    padding: 8px 3px 8px 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.personal-details{
+  list-style: none;
+  margin: 8px 0 0 40px; 
+  padding: 0;
+
+}
+
+.personal-details li{
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+#location{
+    background-color: #FFFFE6;
+    color:#ff8000;
+    padding: 8px 3px 8px 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-right: 15px;
+
+}
+
+#work{
+    background-color: #ECFFE6;
+    color: #249900;
+    padding: 8px 2px 8px 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#bio{
+    background-color: #f9e6ff;
+    color: #c91aff;
+    padding: 8px 3px 8px 3px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+
+
+/* Activity Container */
+#activity {
+  padding: 10px;
+}
+
+/* Post Card */
+.post {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 15px;
+  color: #2b2b2b;
+}
+
+.username a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.description {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+.post p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.link-black {
+  font-size: 13px;
+  color: #777;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.link-black:hover {
+  color: #007bff;
+}
+
+
+.float-right {
+  float: right;
+}
+
+
+.form-control-sm {
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 13px;
+}
+
+
+.input-group {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-group input {
+  flex: 1;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.input-group button {
+  border-radius: 0 8px 8px 0;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+
+
+
+

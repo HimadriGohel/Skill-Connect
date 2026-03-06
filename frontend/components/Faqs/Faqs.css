@@ -1,0 +1,80 @@
+
+
+.faq-header h2 {
+  text-align: center;
+}
+
+.faq {
+  margin-block: 120px;
+}
+
+.accordion-item-border {
+  background-color: #fff;
+  color: #111;
+  border-block: 1px solid rgb(229, 231, 235) !important;
+  overflow: hidden;
+}
+
+.faq-questions {
+  margin-block: 35px;
+}
+
+.accordion-item-header {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-item-header:hover {
+  background-color: #f1f1f1;
+}
+
+.accordion-item-header::after {
+  content: "\1F648";
+  font-size: 1.5rem;
+  color: #ff9502;
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s ease;
+  /* Adding transition to rotate */
+}
+
+.accordion-item-header.active::after {
+  content: "\1F441";
+  transform: rotate(180deg);
+  /* Add rotation for active state */
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  /* Animate height on expand/collapse */
+}
+
+.accordion-item-body.active {
+  max-height: 1000px;
+  /* You can set this to a high enough value to accommodate content */
+  overflow: visible;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--secondary-text-color);
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.4s ease-in-out;
+  /* Smooth opacity transition */
+}
+
+.accordion-item-body.active .accordion-item-body-content {
+  opacity: 1;
+  /* Fade in when the body is active */
+}

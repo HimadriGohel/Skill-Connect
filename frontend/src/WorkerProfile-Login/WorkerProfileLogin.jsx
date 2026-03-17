@@ -4,6 +4,7 @@ import './WorkerProfileLogin.css';
 import axios from 'axios';
 import { API } from '../api/axios';
 
+
 function WorkerProfile() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -107,7 +108,7 @@ function WorkerProfile() {
         setShowForgotPassword(false);
         setNewPassword('');
         setConfirmPassword('');
-        setEmail(''); // Clear email after success
+        setEmail(''); 
       }
     } catch (error) {
       setError(error.response?.data?.message || 'An error occurred. Please try again.');
@@ -122,7 +123,7 @@ function WorkerProfile() {
         <div className="box-shadow flex">
           <div className="profile-left">
             <div className="worker-image">
-              <img src='../../components/assets/photo-college.png' alt="worker image" />
+              <img src='../../components/assets/login-image.jpeg' alt="login image" />
             </div>
           </div>
           <div className="profile-right">
@@ -191,14 +192,14 @@ function WorkerProfile() {
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                       />
-                      <img
+                      {/* <img
                         id="new-eye-icon"
                         className="open"
                         src={`/assets/image/${showNewPassword ? 'open-eye.png' : 'close-eye.png'}`}
                         alt={showNewPassword ? "Hide new password" : "Show new password"}
                         onClick={toggleNewPasswordVisibility}
                         style={{ cursor: 'pointer' }}
-                      />
+                      /> */}
                     </div>
 
                     <div className="password-flex" id='confirm-password-flex'>

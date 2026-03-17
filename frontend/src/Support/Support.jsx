@@ -6,8 +6,10 @@ import Complaint from '../../components/Complaint/Complaint';
 const Support = () => {
   return (
     <>
+  
      <Complaint />
-      <Faqs />
+           <Faqs />
+      
      
     </>
   )

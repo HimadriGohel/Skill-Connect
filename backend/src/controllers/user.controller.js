@@ -224,6 +224,34 @@ const fetchUserHiringHistory = asyncHandler(async (req, res) => {
     );
 });
 
+
+const resetPassword = asyncHandler(async (req, res) => {
+  const { email, password: newPassword } = req.body;
+
+
+  if (!email) {
+    throw new ApiError(400, "Email is required");
+  }
+  if (!newPassword) {
+    throw new ApiError(400, "New password is required");
+  }
+
+  const user = await User.findOne({ email });
+  if (!user) {
+    throw new ApiError(404, "user does not exist with this email");
+  }
+
+  
+  user.password = newPassword;
+  user.UserrefreshToken = undefined;  
+
+  await user.save({ validateBeforeSave: false });
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, {}, "Password reset successful"));
+});
+
 export {
   registerUser,
   loginUser,
@@ -232,4 +260,5 @@ export {
   editUserData,
   isUserloggedIn,
   fetchUserHiringHistory,
+  resetPassword,
 };

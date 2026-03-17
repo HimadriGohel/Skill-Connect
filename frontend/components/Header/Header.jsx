@@ -1,11 +1,13 @@
 // import React from 'react';
 import './Header.css';
-import workManImg from '../assets/workman.jpg';
+// import workManImg from '../assets/workman.jpg';
+import workerman1 from '../assets/workerman1.png';
+
 
 const Header = () => {
   return (
     <header>
-      <div className="container header-section flex">
+      <div className="container header-section flex" id="container-header">
         <div className="header-left">
        <h1 style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             Looking for a
@@ -70,7 +72,7 @@ const Header = () => {
           </div>
         </div>
         <div className="header-right">
-          <img src={workManImg} alt="worker" />
+          <img src={workerman1} alt="worker" />
         </div>
       </div>
     </header>

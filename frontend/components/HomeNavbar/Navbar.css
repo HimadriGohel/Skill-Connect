@@ -1,10 +1,8 @@
-/* Basic styling for the navbar */
-
 
 .navbar {
   padding-block: 10px;
   background-color: white;
-  /* Add a background color to the navbar */
+ 
 }
 
 .hover-links {
@@ -21,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Vertically align items in the center */
+  
 }
 
 .logo-image img {
@@ -29,7 +27,7 @@
   height: auto;
 }
 
-/* Navigation links styling */
+
 .nav-links ul {
   display: flex;
   gap: 40px;
@@ -59,10 +57,10 @@
   color: #ff9502 !important;
 }
 
-/* Styling for the mobile toggle button (hamburger) */
+
 .nav-toggle {
    display: none; 
-  /* Hidden by default, will be shown in mobile */
+  
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -73,7 +71,7 @@
   height: auto;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -104,3 +102,59 @@
     padding: 8px 16px;
   }
 }
+
+
+/* 
+.navbar {
+  width: 100%;
+  padding: 15px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #ff8c00;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.register-btn {
+  background: linear-gradient(45deg,#ff8c00,#ffa500);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(158, 107, 44, 0.87);
+} */

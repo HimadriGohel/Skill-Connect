@@ -5,7 +5,6 @@ const Activity = () => {
   return (
     <div className="tab-pane" id="activity">
 
-      {/* Original first post - benchmark */}
       <div className="post">
         <div className="user-block">
           <img className="img-circle img-bordered-sm" src="./dist/img/user1-128x128.jpg" alt="User" />
@@ -28,7 +27,7 @@ const Activity = () => {
         <input className="form-control form-control-sm" type="text" placeholder="Type a comment..." />
       </div>
 
-      {/* Sarah Ross - exact same structure */}
+    
       <div className="post">
         <div className="user-block">
           <img className="img-circle img-bordered-sm" src="./dist/img/user7-128x128.jpg" alt="User" />
@@ -51,7 +50,7 @@ const Activity = () => {
         <input className="form-control form-control-sm" type="text" placeholder="Your response..." />
       </div>
 
-      {/* Ethan Barrett - exact same */}
+   
       <div className="post">
         <div className="user-block">
           <img className="img-circle img-bordered-sm" src="./dist/img/user8-128x128.jpg" alt="User" />
@@ -74,7 +73,7 @@ const Activity = () => {
         <input className="form-control form-control-sm" type="text" placeholder="Your response..." />
       </div>
 
-      {/* Georgina Garner - exact same */}
+   
       <div className="post">
         <div className="user-block">
           <img className="img-circle img-bordered-sm" src="./dist/img/user4-128x128.jpg" alt="User" />

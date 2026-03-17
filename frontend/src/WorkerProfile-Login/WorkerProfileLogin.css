@@ -20,12 +20,12 @@ h6 {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05882);
     align-items: flex-start;
-    padding-bottom: 100px;
+    padding-bottom: 15px; 
 }
 
 .worker-image img {
     width: 100%;
-    height: 530px;
+    height: 570px;
 }
 
 .profile-left {
@@ -103,4 +103,76 @@ h6 {
 
 #eye-icon {
     height: 23px;
+}
+
+
+
+
+/* tablet view */
+@media (max-width: 992px) {
+
+  .box-shadow{
+    flex-direction: column;
+  }
+
+  .profile-left{
+    width: 100%;
+  }
+
+  .profile-right{
+    width: 100%;
+    padding: 30px;
+  }
+
+  .worker-image img{
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .login-form{
+    margin-top: 0;
+  }
+
+}
+
+
+/* mobile view */
+
+@media (max-width: 576px) {
+
+  .profile-main{
+    padding: 10px;
+  }
+
+  h6{
+    font-size: 20px;
+  }
+
+  .profile-right{
+    padding: 20px;
+  }
+
+  .worker-image img{
+    max-height: 250px;
+  }
+
+  .login-form{
+    gap: 20px;
+  }
+
+  #profile-email,
+  #password{
+    font-size: 15px;
+  }
+
+  .login-btn{
+    padding: 12px 0 !important;
+    font-size: 15px;
+  }
+
+  #eye-icon{
+    height: 20px;
+  }
+
 }

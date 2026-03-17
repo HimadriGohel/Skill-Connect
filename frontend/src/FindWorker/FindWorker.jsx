@@ -50,7 +50,7 @@ const FindWorker = () => {
   return (
     <div>    
      <div className="banner-image">
-        <img src="../../components/assets/jobboard-banner.jpg" alt="banner-image" />
+        <img src="../../components/assets/jobboard-banner.jpeg" alt="banner-image" />
       </div> 
       <div className="worker-banner-text">
         <h2 style={{ fontWeight: 600 , fontSize: "2rem" }}>Worker Portal</h2>

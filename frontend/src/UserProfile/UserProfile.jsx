@@ -105,7 +105,6 @@ function UserProfile() {
 
       <div className="row g-4">
 
-        {/* Left - Personal Details */}
         <div className="col-lg-6">
           <div className="card profile-card h-100 shadow">
             <div className="card-header">
@@ -156,7 +155,7 @@ function UserProfile() {
           </div>
         </div>
 
-        {/* Right - Overview */}
+        
         <div className="col-lg-6">
           <div className="card profile-card h-100 shadow">
             <div className="card-header">
@@ -189,7 +188,7 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Hiring History - full width */}
+      
       <div className="card profile-card shadow mt-4">
         <div className="card-header">
         <h3><span className="material-symbols-outlined">history_2</span>Hiring History</h3>
@@ -238,7 +237,7 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Edit Modal - same logic */}
+
       <div className="modal fade" id="editModal" tabIndex="-1" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">

@@ -10,10 +10,10 @@ import icon4 from "../images/customer-satisfaction.png"
 
 
 const WorkerProfile = () => {
-    const { id } = useParams(); // Get worker ID from URL
+    const { id } = useParams(); 
     const [worker, setWorker] = useState(null);
     const [error, setError] = useState("");
-    const [user, setUser] = useState(null); // Store user authentication status
+    const [user, setUser] = useState(null); 
     const workerId = worker?._id;
     const [isHired, setIsHired] = useState(false);
     useEffect(() => {
@@ -33,13 +33,13 @@ const WorkerProfile = () => {
         const checkLoginStatus = async () => {
             try {
                 const response = await API.get("/user/checkUserLogin", {
-                    withCredentials: true, // Ensure cookies are sent
+                    withCredentials: true, 
                 });
 
-                console.log("API Response:", response.data); // Debugging response
+                console.log("API Response:", response.data); 
 
                 if (response.data?.loggedIn && response.data?.user) {
-                    setUser(response.data.user); // Set the user state correctly
+                    setUser(response.data.user); 
                 } else {
                     setUser(null);
                 }
@@ -55,7 +55,7 @@ const WorkerProfile = () => {
         }
     }, [id]);
 
-    // Track hiring status
+
 
     const hireWorker = async (workerId, userId) => {
 
@@ -80,11 +80,11 @@ const WorkerProfile = () => {
                 alert(response.data?.message || "Worker successfully hired!");
                 setIsHired(true);
 
-                // ✅ Store hiring status in localStorage
+
                 const storageKey = `hired_${workerId}_${userId}`;
                 localStorage.setItem(storageKey, "true");
 
-                // 🔍 Debug log
+          
                 console.log(`📝 Saved to localStorage: ${storageKey} = "true"`);
             } else {
                 alert("Failed to hire worker. Please try again.");
@@ -101,7 +101,7 @@ const WorkerProfile = () => {
         const storageKey = `hired_${workerId}_${user._id}`;
         const storedStatus = localStorage.getItem(storageKey);
 
-        // 🔍 Debug log
+
         console.log(`🔍 Checking localStorage: ${storageKey} =`, storedStatus);
 
         if (storedStatus !== null) {
@@ -222,7 +222,7 @@ const WorkerProfile = () => {
                     </div>
 
                     <div className="price-duration">
-                        <p className="worker-profile-color f-weight">Price : ₹8,800–₹17,600</p>
+                        <p className="worker-profile-color f-weight">Price : ₹8,800–₹17,600</p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <p className="worker-profile-color f-weight">Duration : 10 Days</p>
                         <div className="category">
 
@@ -253,7 +253,7 @@ const WorkerProfile = () => {
                     </div>
 
                     <div className="price-duration">
-                        <p className="worker-profile-color f-weight">Price : ₹9,800–₹16,600</p>
+                        <p className="worker-profile-color f-weight">Price : ₹9,800–₹16,600</p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <p className="worker-profile-color f-weight">Duration : 20 Days</p>
                         <div className="category">
 

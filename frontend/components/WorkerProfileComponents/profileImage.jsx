@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../../src/Worker-Profile/Worker-profile.css';
-import { FaPencilAlt } from "react-icons/fa";           // ← install: npm i react-icons
-import WorkerProfileSettingsModal from "./WorkerProfileSettingsModal";  // ← new component we'll create
+import { FaPencilAlt } from "react-icons/fa";          
+import WorkerProfileSettingsModal from "./WorkerProfileSettingsModal";  
 
 const ProfileImage = () => {
   const [worker, setWorker] = useState(null);

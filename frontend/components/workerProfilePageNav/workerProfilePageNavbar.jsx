@@ -11,24 +11,24 @@ function WorkerProfileNavbar({ registrationFormRef }) {
 
     const handleLogout = async () => {
         try {
-            setLoading(true); // Start loading spinner
+            setLoading(true); 
 
             // Logout request
             const response = await API.post(
                 '/workers/logout',
-                {}, // Empty body for POST request
-                { withCredentials: true } // Send cookies with the request
+                {}, 
+                { withCredentials: true } 
             );
 
             if (response.data.success) {
-                navigate('/'); // Redirect to home after successful logout
+                navigate('/'); 
             } else {
                 setError('Logout failed. Please try again.');
             }
         } catch (error) {
-            setError('Failed to log out. Please try again.'); // Catch error in case of failure
+            setError('Failed to log out. Please try again.'); 
         } finally {
-            setLoading(false); // Stop loading spinner after response
+            setLoading(false); 
         }
     };
 
@@ -60,17 +60,17 @@ function WorkerProfileNavbar({ registrationFormRef }) {
                             <li>
                                 <button
                                     className="hover-links primary-btn"
-                                    onClick={handleLogout} // Trigger logout on click
-                                    disabled={loading} // Disable button while loading
+                                    onClick={handleLogout} 
+                                    disabled={loading} 
                                 >
-                                    {loading ? "logging out..." : 'Logout'} {/* Display message while logging out */}
+                                    {loading ? "logging out..." : 'Logout'} 
                                 </button>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            {error && <div className="error-message">{error}</div>} {/* Display error message if logout fails */}
+            {error && <div className="error-message">{error}</div>} 
         </>
     );
 }

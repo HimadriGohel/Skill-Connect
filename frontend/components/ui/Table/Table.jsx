@@ -1,6 +1,6 @@
 // Table.js
 import React from "react";
-// import "./Table.css"; 
+//import "./Table.css"; 
 
 const Table = React.forwardRef(({ className, ...props }, ref) => (
     <div className="table-container">

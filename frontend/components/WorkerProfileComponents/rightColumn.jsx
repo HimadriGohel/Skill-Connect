@@ -16,7 +16,7 @@ const RightColumn = () => {
       <ul className="nav nav-pills">
         <li className="nav-item">
           <button
-            className={`nav-link ${activeTab === "activity" ? "active" : ""}`}
+          className="activities"
             onClick={() => setActiveTab("activity")}
           >
             Activity Feed
@@ -30,19 +30,18 @@ const RightColumn = () => {
             Edit Profile
           </button>
         </li> */}
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <button
-            className={`nav-link ${activeTab === "editcredentials" ? "active" : ""}`}
             onClick={() => setActiveTab("editcredentials") 
             
             }
           >
             Credentials
           </button>
-        </li>
+        </li> */}
         <li className="nav-item">
           <button
-            className={`nav-link ${activeTab === "applicants" ? "active" : ""}`}
+          className="applicants"
             onClick={() => setActiveTab("applicants")}
           >
             Applicants

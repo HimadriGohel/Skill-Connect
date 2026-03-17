@@ -8,6 +8,7 @@ import WorkerProfileNavbar from "../components/workerProfilePageNav/workerProfil
 import UserPageNav from '../components/userPageNav/userPageNav.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import SignIn from '../components/customerLogin/customerLogin.jsx';
+import ContactUs from '../components/ContactUs/ContactUs.jsx'
 import Support from '../src/Support/Support';
 import Admin from '../src/Admin/Admin';
 import WorkerProfile from '../src/WorkerProfile-Login/WorkerProfileLogin.jsx';
@@ -73,6 +74,11 @@ function App() {
           path: "/support",
           element: <Support />,
         },
+        {
+           path: "/ContactUs",
+           element: <ContactUs />
+        },
+
         // {
         //   path: "/admin",
         //   element: <Admin />,

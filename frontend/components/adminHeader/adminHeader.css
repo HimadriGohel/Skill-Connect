@@ -1,0 +1,175 @@
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+} 
+:root { 
+--background-color1: #fafaff; 
+--background-color2: #ffffff; 
+--background-color3: #ededed; 
+--background-color4: #fff0e6; 
+--primary-color: #4b49ac; 
+--secondary-color: #ffaa33; 
+--Border-color: #3f0097; 
+--one-use-color: #3f0097; 
+--two-use-color: #5500cb; 
+}
+
+body { 
+max-width: 100%; 
+overflow-x: hidden; 
+}
+
+.main-header{
+  height: 70px;
+  width: 100vw;
+  padding: 0 30px;
+  background-color: var(--background-color1); 
+  position: fixed;
+  z-index: 100;
+  box-shadow: 1px 1px 15px #ffb566; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;   
+}
+
+.skillconnect-logo{
+  font-size: 27px;
+  font-weight: 600;
+  color: #ffaa33;
+}
+
+.icn{
+  height: 30px;
+}
+.menuicn{
+  cursor: pointer;
+}
+
+.searchbar , 
+.message , 
+.logosec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar2 { 
+display: none; 
+} 
+
+.logosec{
+  gap: 60px;
+}
+
+#text{
+
+  width:250px;
+  height: 42px;
+  border-radius: 50px 0 0 50px;
+  background-color: var(--background-color3); 
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+
+.searchbtn{
+
+  width: 50px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50px 50px 0;
+  background-color: var(--secondary-color); 
+  cursor: pointer;
+}
+
+.message{
+  gap:40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle{
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  background-color: #ffaa33; 
+  border-radius: 50%;
+  left:19px;
+  top: 8px;
+
+}
+
+.dp{
+  height: 42px;
+  width: 42px;
+  background-color: #626262;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dpicn { 
+height: 42px; 
+} 
+
+
+ @media screen and (max-width: 850px) {   
+    .searchbar { 
+        display: none; 
+    } 
+   
+    .searchbar2 { 
+        width: 100%; 
+        display: flex; 
+        margin: 0 0 40px 0; 
+        justify-content: center; 
+    } 
+    .searchbar2 input { 
+        width: 250px; 
+        height: 42px; 
+        border-radius: 50px 0 0 50px; 
+        background-color: var(--background-color3); 
+        padding: 0 20px; 
+        font-size: 15px; 
+        border: 2px solid var(--secondary-color); 
+    } 
+    } 
+
+     @media screen and (max-width: 490px) { 
+    .message { 
+        display: none; 
+    } 
+    .logosec { 
+        width: 100%; 
+        justify-content: space-between; 
+    } 
+    .logo { 
+        font-size: 20px; 
+    } 
+    .menuicn { 
+        height: 25px; 
+    } 
+  }
+
+   @media screen and (max-width: 400px) { 
+    .searchbtn img { 
+        height: 20px; 
+    } 
+    } 
+
+
+  @media screen and (max-width: 320px) { 
+    
+ searchbtn { 
+        width: 40px; 
+    } 
+    .searchbar2 input { 
+        width: 180px; 
+    } 
+    }

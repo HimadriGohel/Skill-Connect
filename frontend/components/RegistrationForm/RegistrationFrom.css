@@ -1,0 +1,138 @@
+.register-form {
+
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  position: relative;
+}
+/* 
+.register-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+  border-radius: 12px;
+  z-index: 0;
+} */
+
+
+.register-section {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.work {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ff9502;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.firstname, .lastname,
+.phone, .email,
+.address, .aadhar,
+.password, .confirm_password,
+.postal-code, .city,
+.category, .sub-category,
+.desired-period, .pay-rate,
+.Work_experience, .other-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+
+.firstname, .phone, .address, .password, .postal-code {
+  margin-bottom: 0.5rem;
+}
+
+.lastname, .email, .aadhar, .other-details, .confirm_password, .city {
+  margin-bottom: 0.5rem;
+}
+
+textarea.category-select-box {
+  height: 3rem; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.primary-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff9502;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.terms {
+  margin-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .form-row.flex,
+  .pin-city-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .firstname, .lastname, .phone, .email, .password, .confirm_password,
+  .postal-code, .city, .category, .sub-category, .desired-period,
+  .pay-rate, .Work_experience, .aadhar, .other-details.second-row-common,
+  .address {
+    flex: 1 1 100%;
+  }
+
+  .button-container {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}

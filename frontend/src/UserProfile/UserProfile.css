@@ -1,0 +1,169 @@
+#user-profile::before{
+   content: '';
+    background-image: url('../images/header.png');
+    background-size: cover;
+    background-position: bottom;
+    position: absolute; 
+    top: 35%;
+    left: 0px;
+    right: 0;
+    bottom: 0; 
+    height: 100%; 
+    z-index: -1; 
+    opacity: 0.3;
+}
+
+.user-profile-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.welcome-title p{
+  color: grey;
+  font-size: 14px;
+}
+
+.activity span{
+  background-color: whitesmoke;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px white;
+  padding: 12px;
+}
+
+.welcome-title span {
+  color: #ff9502;
+}
+
+.profile-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.profile-card .card-header {
+  color: #ffaa33;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+}
+
+.profile-card .card-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-icon {
+  font-size: 1.4rem;
+  color: #ff9502;
+  min-width: 40px;
+  text-align: center;
+}
+
+.detail-item strong {
+  min-width: 90px;
+  display: inline-block;
+  color: #444;
+}
+
+.detail-item span {
+  color: #555;
+  font-weight: 400;
+}
+
+.edit-btn {
+  background: #ff9502;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.edit-btn:hover {
+  background: #e08500;
+}
+
+.stat-box {
+  background: #fcfcfc;
+  border-radius: 10px;
+  padding: 1.2rem 0.8rem;
+  border: 1px solid #e9ecef;
+}
+ 
+.stat-box-hire{
+  background-color: #ecffe6;
+  color: #249900;
+  border: 2px solid  #ecffe6;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.stat-box-task{
+  background-color: #ffe6e6;
+  color: #ff0000;
+  border: 2px solid #ecffe6;
+  border-radius: 10px;
+  padding: 7px;
+
+}
+.stat-box-pending{
+  background-color: #ffffe6;
+  color:#ff8000;
+    border: 2px solid #ffffe6;
+    border-radius: 10px;
+  padding: 7px;
+
+}
+
+.stat-box h6 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+
+}
+
+.table th {
+  background: #f1f3f5;
+  color: #444;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 0.35em 0.75em;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-accepted { background: #d4edda; color: #155724; }
+.status-rejected  { background: #f8d7da; color: #721c24; }
+.status-pending,
+.status-null      { background: #fff3cd; color: #856404; }
+
+@media (max-width: 992px) {
+  .stat-box { padding: 1rem 0.5rem; }
+  .stat-number { font-size: 1.6rem; }
+}
+
+

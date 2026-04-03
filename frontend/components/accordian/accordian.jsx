@@ -38,8 +38,8 @@ function Accordion({ handleApplyFilter }) {
          }
 
         handleApplyFilter({
-            categories: selectedCategories,
-            cities: selectedCities,
+            category: selectedCategories,
+            city: selectedCities,
             hourlyPay: filteredPays,
     
         });
@@ -110,9 +110,9 @@ function Accordion({ handleApplyFilter }) {
                                 <label>
                                     <input
                                         type="checkbox"
-                                        value="carpentry"
+                                        value="Carpentry"
                                         onChange={() =>
-                                            handleCategoryChange("carpentry")
+                                            handleCategoryChange("Carpentry")
                                         }
                                     />
                                     Carpentry
@@ -159,19 +159,16 @@ function Accordion({ handleApplyFilter }) {
                                 </label>
                             </li>
 
-                            <li>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        value="security"
-                                        onChange={() =>
-                                            handleCategoryChange("security")
-
-                                        }
-                                    />
-                                    Security
-                                </label>
-                            </li>
+                           <li>
+                           <label>
+                            <input
+                            type="checkbox"
+                            value="Security"                  
+                            onChange={() => handleCategoryChange("Security")}   
+                             />
+                             Security
+                          </label>
+                          </li>
 
                             <li>
                                 <label>
@@ -268,7 +265,7 @@ function Accordion({ handleApplyFilter }) {
                                             handleCityChange("ahmedabad")
                                         }
                                     />
-                                    Ahemdabad
+                                    Ahmedabad
                                 </label>
                             </li>
                             <li>
@@ -319,7 +316,7 @@ function Accordion({ handleApplyFilter }) {
                                         handleHourlyPayChange("Custom")
                                         }
                                     />
-                                    Price
+                                    Custom Price
                                 </label>
                                 {selectedhourlyPay.includes("Custom") && (
                                     <div>
@@ -332,7 +329,7 @@ function Accordion({ handleApplyFilter }) {
                                     </div>
                                 )}
                             </li>
-                            {/* <li>
+                            <li>
                                 <label>
                                     <input
                                         type="checkbox"
@@ -343,8 +340,8 @@ function Accordion({ handleApplyFilter }) {
                                     />
                                     Up to 500
                                 </label>
-                            </li> */}
-                            {/* <li>
+                            </li>
+                            <li>
                                 <label>
                                     <input
                                         type="checkbox"
@@ -355,8 +352,8 @@ function Accordion({ handleApplyFilter }) {
                                     />
                                     Up to 1000
                                 </label>
-                            </li> */}
-                            {/* <li>
+                            </li>
+                            <li>
                                 <label>
                                     <input
                                         type="checkbox"
@@ -367,7 +364,7 @@ function Accordion({ handleApplyFilter }) {
                                     />
                                     Above 1000
                                 </label>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                 </div>

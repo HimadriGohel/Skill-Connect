@@ -43,6 +43,7 @@ const getCategory = asyncHandler(async (req, res) => {
     const categories = await Category.find();
     res.status(200).json(categories);
   } catch (error) {
+    console.log(error);
     res.status(500).json(new ApiError(500, "Error fetching categories"));
   }
 });

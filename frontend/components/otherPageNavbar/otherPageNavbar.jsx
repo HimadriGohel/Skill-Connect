@@ -89,9 +89,9 @@ function Navbar({ registrationFormRef }) {
                   </button>
                 </li>
               )}
-              <li>
+              {/* <li>
                 <button className="hover-links primary-btn" onClick={scrollToForm}>Register</button>
-              </li>
+              </li> */}
             </ul>
           </div>
           <button

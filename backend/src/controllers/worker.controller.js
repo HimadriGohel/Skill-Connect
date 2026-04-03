@@ -383,15 +383,15 @@ const getFilteredWorkers = asyncHandler(async (req, res) => {
 
   hourlyPayArray.forEach((pay) => {
 
-    // if (pay === "500") {
-    //   hourlyPayFilters.push({ hourlyPay: { $lte: 500 } });
-    // } 
-    // else if (pay === "1000") {
-    //   hourlyPayFilters.push({ hourlyPay: { $lte: 1000 } });
-    // } 
-    // else if (pay === "Above1000") {
-    //   hourlyPayFilters.push({ hourlyPay: { $gt: 1000 } });
-    // } 
+    if (pay === "500") {
+      hourlyPayFilters.push({ hourlyPay: { $lte: 500 } });
+    } 
+    else if (pay === "1000") {
+      hourlyPayFilters.push({ hourlyPay: { $lte: 1000 } });
+    } 
+    else if (pay === "Above1000") {
+      hourlyPayFilters.push({ hourlyPay: { $gt: 1000 } });
+    } 
 
    if (!isNaN(pay)) {
   hourlyPayFilters.push({ hourlyPay: Number(pay) });
@@ -409,6 +409,27 @@ const getFilteredWorkers = asyncHandler(async (req, res) => {
     new ApiResponse(200, {
       workers,
     })
+  );
+});
+
+const resetWorkerPassword = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    throw new ApiError(400, "Email and new password are required");
+  }
+
+  const worker = await Worker.findOne({ email });
+
+  if (!worker) {
+    throw new ApiError(404, "Worker not found");
+  }
+
+  worker.password = password;
+  await worker.save({ validateBeforeSave: false });
+
+  return res.status(200).json(
+    new ApiResponse(200, {}, "Password reset successfully")
   );
 });
 
@@ -654,6 +675,7 @@ export {
   getWorkers,
   getWorkerDetailsById,
   getFilteredWorkers,
+  resetWorkerPassword,
   // refreshAccessToken,
   // getCurrentUser,
   // updateUserAvatar,

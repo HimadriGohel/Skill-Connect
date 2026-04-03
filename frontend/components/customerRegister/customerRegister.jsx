@@ -125,7 +125,7 @@ const RegisterPopup = ({ toggleForm }) => {
     return (
         <div className="login-container">
             <div className="login-info">
-                <div className="small-bold-text red">Note: *This is for customers only</div>
+                <div className="small-bold-text red">Note: *This is for customers and Admin</div>
                 <div className="customer-login-form flex scrollable-form">
                     <div className="common">
                         <input

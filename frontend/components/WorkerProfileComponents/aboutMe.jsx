@@ -24,55 +24,53 @@ const AboutMeBox = ({ }) => {
   return (
     <div className="card card-primary">
       <div className="card-header">
-        <h3 className="card-title">ABOUT PROFILE</h3>
+        <h3 className="card-title">About Profile</h3>
       </div>
       <div className="card-body">
-        <strong>
-          <i className="fas fa-book mr-1"></i> PERSONAL INFORMATION
-        </strong>
-        <ul className="list-group list-group-unbordered">
-          <li className="list-group-item child-upper text-muted">
-            <span style={{ fontWeight: 500 }}>Email: </span> {worker.email}
-          </li>
-          <li className="list-group-item text-muted">
-            <span style={{ fontWeight: 500 }}>Phone: </span> {worker.phone}
-          </li>
-          <li className="list-group-item text-muted child-bottom">
-            <span style={{ fontWeight: 500 }}>ID Ref: </span> {worker.aadhar}
-          </li>
-        </ul>
+       <div className="personal-row">
+      <strong className="personal-title">
+        <span className="material-symbols-outlined" id="person">person_apron</span>
+        Personal Details
+      </strong>
 
-        <hr />
-        <strong>
-          <i className="fas fa-map-marker-alt mr-1"></i> LOCATION
-        </strong>
-        <ul className="text-muted list-group list-group-unbordered">
-          <li className="text-muted list-group-item child-upper mb-0 pb-1">
-            <span style={{ fontWeight: 500 }}>City: </span> {worker.city}
-          </li>
-          <li className="text-muted list-group-item child-bottom mb-0 pb-0">
-            <span style={{ fontWeight: 500 }}>Zip Code: </span> {worker.postalCode}
-          </li>
+      <ul className="personal-details">
+        <li>{worker.email}</li>
+        <li>{worker.phone}</li>
+        <li>{worker.aadhar}</li>
+      </ul>
+      </div>
+      
+   <br></br> 
+        <div className="personal-row">
+        <strong><i className="fas fa-map-marker-alt mr-1" id="location"></i>Location</strong>
+        <ul className="personal-details">
+          <li>{worker.city}</li>
+          <li>{worker.postalCode}</li>
         </ul>
+        </div>
 
-        <hr />
+       <br></br>
+
+        <div className="personal-row">
         <strong>
-          <i className="fas fa-pencil-alt mr-1"></i> WORK STATISTICS
+         <span className="material-symbols-outlined" id="work">payments</span> Work Stastics
         </strong>
-        <ul className="text-muted list-group list-group-unbordered">
-          <li className="list-group-item child-upper text-muted">
-            <span style={{ fontWeight: 500 }}>Hourly Pay: </span> ${worker.hourlyPay}/hr
-          </li>
-          <li className="list-group-item child-bottom text-muted">
-            <span style={{ fontWeight: 500 }}>Period: </span> {worker.desiredPeriod} hours
-          </li>
+        <ul className="personal-details">
+          <li>${worker.hourlyPay}/hr</li>
+          <li>{worker.desiredPeriod} hours</li>
         </ul>
+        </div>
 
-        <hr />
+        <br></br>
+
+         <div className="personal-row">
         <strong>
-          <i className="far fa-file-alt mr-1"></i> BIO
+          <span className="material-symbols-outlined" id="bio">article</span> Bio
         </strong>
-        <p className="text-muted">{worker.workerDetails}</p>
+         <ul className="personal-details">
+            <li>{worker.workerDetails}</li>
+            </ul>
+            </div>
       </div>
     </div>
   );

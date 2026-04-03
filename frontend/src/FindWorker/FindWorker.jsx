@@ -31,7 +31,7 @@ const FindWorker = () => {
       worker.category.toLowerCase().includes(searchKeyword.toLowerCase()) ||
       worker.city.toLowerCase().includes(searchKeyword.toLowerCase())
     );
-
+    
     dispatch(successForWorkers(filteredWorkers)); // Update state with filtered results
   };
 
@@ -157,7 +157,7 @@ const FindWorker = () => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default FindWorker;

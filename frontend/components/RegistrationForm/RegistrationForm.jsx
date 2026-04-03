@@ -35,7 +35,6 @@ export const RegistrationForm = ({ formRef }) => {
   const [step, setStep] = useState(1);
 
   useEffect(() => {
-    // Fetch categories from backend when component mounts
     const fetchCategories = async () => {
       try {
         const res = await API.get("/category/getCategory");
@@ -55,12 +54,11 @@ export const RegistrationForm = ({ formRef }) => {
     const selectedCat = categories.find(category => category._id === selectedCategoryId);
     setFormData((prevData) => ({
       ...prevData,
-      category: selectedCat ? selectedCat.category : "",  // Store category name
-      subCategory: "", // Reset subcategory
+      category: selectedCat ? selectedCat.category : "", 
+      subCategory: "", 
     }));
     setSubCategories([]);
 
-    // Fetch subcategories based on selected category
     try {
       const response = await API.get(`/subCategory/getSubCategories/${selectedCategoryId}`);
       if (response.data.length > 0) {
@@ -84,7 +82,6 @@ export const RegistrationForm = ({ formRef }) => {
   };
 
 
-  // Add a function specifically for step 1 validation
 const validateStep1 = () => {
   const { firstName, lastName, phone, email, address, aadhar, file, password, confirmPassword, postalCode, city } = formData;
 
@@ -145,31 +142,30 @@ const validateStep1 = () => {
       return false;
     }
 
-    // Validate email format
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address.");
       return false;
     }
 
-    // Validate password match
+
     if (password !== confirmPassword) {
       alert("Passwords do not match.");
       return false;
     }
 
-    // Check if terms are accepted
+   
     if (!termsAccepted) {
       alert("You must accept the terms and conditions.");
       return false;
     }
-    // Validate phone number length and numeric-only input
+ 
     const phonePattern = /^\d{10}$/;
     if (!phonePattern.test(phone)) {
       alert("Phone number must be exactly 10 digits and numeric.");
       return false;
     }
-    // Validate Aadhaar number length and numeric-only input
+   
     const aadharPattern = /^\d{12}$/;
     if (!aadharPattern.test(aadhar)) {
       alert("Aadhaar number must be exactly 12 digits and numeric.");
@@ -368,7 +364,7 @@ const validateStep1 = () => {
                setStep(2); // Only go to step 2 if step1 is valid
                }
                }}> Next
-  </button>
+             </button>
               </div>   
             </div>
               

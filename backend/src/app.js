@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+
 const app = express();
 
 app.use(
@@ -32,5 +33,6 @@ app.use("/api/v1/category", categoryRouter);
 app.use("/api/v1/subCategory", subCategoryRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/hiring", hiringRouter);
+
 
 export { app };

@@ -2,13 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './UserProfile.css';               // ← your separate CSS
+import './UserProfile.css';         
 import { FaUser, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaEdit } from 'react-icons/fa';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { API } from "../api/axios";
 
-import hiringhistory from "../images/hiring_history.png"
 function UserProfile() {
   const [userDetails, setUserDetails] = useState({
     fullName: '',
@@ -21,7 +20,6 @@ function UserProfile() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // ── your existing fetch logic (unchanged) ──
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -91,8 +89,13 @@ function UserProfile() {
 
   if (loading) return <div className="text-center mt-5">Loading...</div>;
 
+  // Dynamic counts based on workerRequests
+  const pendingCount = workerRequests.filter(req => req.status?.toLowerCase() === 'pending').length;
+  const acceptedCount = workerRequests.filter(req => req.status?.toLowerCase() === 'accepted').length;
+  const rejectedCount = workerRequests.filter(req => req.status?.toLowerCase() === 'rejected').length;
+
   return (
-    <div className="user-profile-page container py-4">
+    <div className="user-profile-page container py-4" id="user-profile">
 
       <h1 className="welcome-title mb-5">
         Welcome, <span>{userDetails.fullName || "User"}</span>
@@ -102,7 +105,6 @@ function UserProfile() {
 
       <div className="row g-4">
 
-        {/* Left - Personal Details */}
         <div className="col-lg-6">
           <div className="card profile-card h-100 shadow">
             <div className="card-header">
@@ -153,7 +155,7 @@ function UserProfile() {
           </div>
         </div>
 
-        {/* Right - Overview */}
+        
         <div className="col-lg-6">
           <div className="card profile-card h-100 shadow">
             <div className="card-header">
@@ -163,20 +165,20 @@ function UserProfile() {
               <div className="row g-3 text-center">
                 <div className="col-4">
                   <div className="stat-box-hire">
-                    <span className="material-symbols-outlined">manage_accounts</span><h6>Workers<br></br> Hired</h6>
-                    <div className="stat-number">0</div>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="stat-box-task">
-                    <span className="material-symbols-outlined">task_alt</span><h6>Tasks Completed</h6>
-                    <div className="stat-number">0</div>
+                    <span className="material-symbols-outlined">task_alt</span><h6>Accepting<br></br>Requests</h6>
+                    <div className="stat-number">{acceptedCount}</div>
                   </div>
                 </div>
                 <div className="col-4">
                   <div className="stat-box-pending">
                     <span className="material-symbols-outlined">pending_actions</span><h6>Pending Requests</h6>
-                    <div className="stat-number">0</div>
+                    <div className="stat-number">{pendingCount}</div>
+                  </div>
+                </div>
+                  <div className="col-4">
+                  <div className="stat-box-task">
+                    <span className="material-symbols-outlined">cancel</span><h6>Rejecting Requests</h6>
+                    <div className="stat-number">{rejectedCount}</div>
                   </div>
                 </div>
                  <div className="activity"><span>Activity analytics will appear here as you start hiring.</span></div>
@@ -186,7 +188,7 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Hiring History - full width */}
+      
       <div className="card profile-card shadow mt-4">
         <div className="card-header">
         <h3><span className="material-symbols-outlined">history_2</span>Hiring History</h3>
@@ -235,7 +237,7 @@ function UserProfile() {
         </div>
       </div>
 
-      {/* Edit Modal - same logic */}
+
       <div className="modal fade" id="editModal" tabIndex="-1" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -270,6 +272,8 @@ function UserProfile() {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 }

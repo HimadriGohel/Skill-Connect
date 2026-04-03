@@ -1,4 +1,4 @@
-/* Basic styling for the navbar */
+ /* Basic styling for the navbar */
 
 
 
@@ -59,7 +59,7 @@
   color: #ff9502 !important;
 }
 
-/* Styling for the mobile toggle button (hamburger) */
+/* Styling for the mobile button (hamburger) */
 .nav-toggle {
   display: none;
   /* Hidden by default, will be shown in mobile */

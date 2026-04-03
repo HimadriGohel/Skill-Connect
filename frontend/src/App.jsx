@@ -9,7 +9,7 @@ import UserPageNav from '../components/userPageNav/userPageNav.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import SignIn from '../components/customerLogin/customerLogin.jsx';
 import Support from '../src/Support/Support';
-import Admin from '../src/Admin/Admin';
+import ContactUs from '../components/ContactUs/ContactUs.jsx'
 import WorkerProfile from '../src/WorkerProfile-Login/WorkerProfileLogin.jsx';
 import Home from '../src/Home/Home';
 import WorkerProfilePage from "../src/Worker-Profile/Worker-Profile.jsx";
@@ -18,14 +18,14 @@ import FindWorker from '../src/FindWorker/FindWorker.jsx';
 import TopBanner from '../components/TopBanner/TopBanner.jsx';
 import WorkerProfile02 from '../src/02WorkerProfile/WorkerProfile02.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "../dist/css/adminlte.min.css";
+// import "../dist/css/adminlte.min.css";
 import './global.css';
 
 import { RegistrationForm } from "../components/RegistrationForm/RegistrationForm";
 
 function App() {
   const registrationFormRef = useRef(null);
-
+  
   // Layout Component to Conditionally Render Navbars
   const Layout = () => {
     const location = useLocation();
@@ -100,6 +100,10 @@ function App() {
         {
           path: "/worker-profile02/:id",
           element: <WorkerProfile02 />,
+        },
+        {
+           path: "/ContactUs",
+           element: <ContactUs />
         },
       ],
     },

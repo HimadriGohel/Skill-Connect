@@ -24,7 +24,7 @@ const Settings = () => {
   useEffect(() => {
     const fetchWorkerDetails = async () => {
       try {
-        const response = await axios.get("http://localhost:000/api/v1/workers/getWorkerprofile", { withCredentials: true });
+        const response = await axios.get("http://localhost:8000/api/v1/workers/getWorkerprofile", { withCredentials: true });
         console.log("API Response:", response.data);
         setFormDataWorker(response.data.data.worker)
         console.log("Updated formDataWorker:", response.data.data.worker);

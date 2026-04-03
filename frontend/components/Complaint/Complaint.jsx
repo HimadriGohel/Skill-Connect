@@ -48,7 +48,7 @@ const Complaint = () => {
       } else {
         alert("Failed to submit the ticket.");
       }
-    } catch (error) {
+    } catch (error) {  
       console.error("Error submitting the ticket:", error);
       alert("Error submitting the ticket.");
     }

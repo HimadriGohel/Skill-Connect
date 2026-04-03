@@ -20,6 +20,7 @@ import {
 } from "../controllers/worker.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
 import { verifyJWT, verifyWorker } from "../middlewares/auth.middleware.js";
+import { resetWorkerPassword } from '../controllers/worker.controller.js';
 import multer from "multer";
 
 const workerRouter = Router();
@@ -37,7 +38,7 @@ workerRouter.route("/fetchRequest").get(verifyWorker, fetchRequests);
 workerRouter.route("/getWorkers").get(getWorkers);
 workerRouter.route("/getFilteredWorkers").get(getFilteredWorkers);
 workerRouter.route("/:id").get(getWorkerDetailsById);
-
+workerRouter.route("/reset-password").post(resetWorkerPassword);
 //secured routes
 // router.route("/refresh-token").post(refreshAccessToken);
 // router.route("/change-password").post(verifyJWT, changeCurrentPassword);

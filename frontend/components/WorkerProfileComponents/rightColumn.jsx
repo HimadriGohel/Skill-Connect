@@ -23,20 +23,20 @@ const RightColumn = () => {
           </button>
         </li>
         <li className="nav-item">
-          <button
+          {/* <button
             className={`nav-link ${activeTab === "settings" ? "active" : ""}`}
             onClick={() => setActiveTab("settings")}
           >
             Edit Profile
-          </button>
+          </button> */}
         </li>
         <li className="nav-item">
-          <button
+          {/* <button
             className={`nav-link ${activeTab === "editcredentials" ? "active" : ""}`}
             onClick={() => setActiveTab("editcredentials")}
           >
             Credentials
-          </button>
+          </button> */}
         </li>
         <li className="nav-item">
           <button

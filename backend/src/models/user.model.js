@@ -24,6 +24,13 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: [true, "password is required"],
     },
+
+    role: {
+      type: String,
+      enum: ["customer", "admin"],
+      default: "customer"
+    },
+    
     hiringHistory: [
       {
         worker: { type: mongoose.Schema.Types.ObjectId, ref: "Worker" },

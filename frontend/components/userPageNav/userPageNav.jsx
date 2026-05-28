@@ -20,6 +20,7 @@ function UserPageNav({ }) {
             );
 
             if (response.data.success) {
+                localStorage.removeItem("role");
                 navigate('/');
             } else {
                 setError('Logout failed. Please try again.');

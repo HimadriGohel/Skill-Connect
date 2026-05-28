@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { createBrowserRouter, Outlet, RouterProvider, useLocation } from "react-router-dom";
+import { createBrowserRouter, Navigate, Outlet, RouterProvider, useLocation } from "react-router-dom";
 import Navbar from '../components/HomeNavbar/Navbar.jsx';
 import OtherPageNavbar from '../components/otherPageNavbar/otherPageNavbar.jsx';
 import WorkerProfileNavbar from "../components/workerProfilePageNav/workerProfilePageNavbar.jsx";
@@ -11,9 +11,6 @@ import SignIn from '../components/customerLogin/customerLogin.jsx';
 import ContactUs from '../components/ContactUs/ContactUs.jsx'
 import Support from '../src/Support/Support';
 import Admin from '../src/Admin/Admin';
-import AdminHeader from '../components/adminHeader/adminHeader.jsx';
-import AdminNavbar from '../components/adminNavbar/adminNavbar.jsx';
-import AdminContainer from '../components/adminContainer/adminContainer.jsx';
 import WorkerProfile from '../src/WorkerProfile-Login/WorkerProfileLogin.jsx';
 import Home from '../src/Home/Home';
 import WorkerProfilePage from "../src/Worker-Profile/Worker-Profile.jsx";
@@ -22,12 +19,23 @@ import FindWorker from '../src/FindWorker/FindWorker.jsx';
 import TopBanner from '../components/TopBanner/TopBanner.jsx';
 import WorkerProfile02 from '../src/02WorkerProfile/WorkerProfile02.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "../dist/css/adminlte.min.css";
 import './global.css';
 
-
 import { RegistrationForm } from "../components/RegistrationForm/RegistrationForm";
-const role = localStorage.getItem("role");
+
+// Route guard: only admins can access this route
+const AdminRoute = ({ children }) => {
+  const role = localStorage.getItem("role");
+  if (role !== "admin") return <Navigate to="/userprofile" replace />;
+  return children;
+};
+
+// Route guard: admins are redirected to /admin, non-logged-in users to /signin
+const UserRoute = ({ children }) => {
+  const role = localStorage.getItem("role");
+  if (role === "admin") return <Navigate to="/admin" replace />;
+  return children;
+};
 function App() {
   const registrationFormRef = useRef(null);
 
@@ -88,27 +96,16 @@ function App() {
         },
         {          
         path:"/admin" ,
-        element:<Admin />
+        element: <AdminRoute><Admin /></AdminRoute>
         }, 
-        {
-         path: "/adminHeader",
-         element:<AdminHeader />
-        },
-        {
-         path: "/adminNavbar",
-         element:<AdminNavbar />
-        },
-        {
-          path: "/adminContainer",
-          element: <AdminContainer />
-        },
+
         {
           path: "/worker-profile",
           element: <WorkerProfilePage />, // Worker Profile Page
         },
         {
           path: "/userprofile",
-          element: <UserProfile />, // User Profile Page
+          element: <UserRoute><UserProfile /></UserRoute>, // User Profile Page
         },
         {
           path: "/workerprofile",

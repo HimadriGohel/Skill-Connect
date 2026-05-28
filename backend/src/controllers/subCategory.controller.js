@@ -35,19 +35,27 @@ const addSubcategories = async (req, res) => {
   }
 };
 
+
 const getSubCategory = asyncHandler(async (req, res) => {
-  //fetch all categories from database
-  try {
-    const { categoryId } = req.params;
-    const subCategory = await SubCategory.findOne({ category: categoryId });
-    if (!subCategory) {
-      return res
-        .status(404)
-        .json({ error: "No subcategories found for this category" });
+    try {
+        const { categoryId } = req.params;
+        const cleanId = categoryId.trim();
+
+        // This query finds the category whether it is stored as a String OR an ObjectId
+        const subCategories = await SubCategory.find({
+            $or: [
+                { category: cleanId },
+                { category: mongoose.Types.ObjectId.isValid(cleanId) ? new mongoose.Types.ObjectId(cleanId) : null }
+            ]
+        });
+
+        console.log(`Found ${subCategories.length} items for ID: ${cleanId}`);
+        res.status(200).json(subCategories);
+    } catch (error) {
+        console.error("Query Error:", error);
+        res.status(500).json({ error: "Server Error" });
     }
-    res.json(subCategory.subcategories); // Return only the array of subcategories
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch subcategories" });
-  }
 });
+
+ 
 export { addSubcategories, getSubCategory };

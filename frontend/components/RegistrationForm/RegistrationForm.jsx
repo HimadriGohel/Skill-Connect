@@ -61,8 +61,12 @@ export const RegistrationForm = ({ formRef }) => {
 
     try {
       const response = await API.get(`/subCategory/getSubCategories/${selectedCategoryId}`);
-      if (response.data.length > 0) {
-        setSubCategories(response.data);
+      //  const { subCategories } = response.data; 
+      // response.data is now the array [ ... ]
+      if (response.data && response.data.length > 0) {
+          setSubCategories(response.data);
+      } else {
+          setSubCategories([]);
       }
     } catch (error) {
       console.error("Failed to fetch subcategories:", error);

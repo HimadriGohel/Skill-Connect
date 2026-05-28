@@ -159,7 +159,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 });
 
 const getUserData = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user.id);
+  const user = await User.findById(req.user._id);
   // const worker = await Worker.findById(req.body.id);
   if (!user) {
     throw new ApiError(404, "user does not exist with this email");
@@ -254,6 +254,13 @@ const resetPassword = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "Password reset successful"));
 });
 
+const getAllUsers = asyncHandler(async (req, res) => {
+  const users = await User.find({}).select("-password -UserrefreshToken");
+  return res.status(200).json(
+    new ApiResponse(200, users, "all users fetched successfully")
+  );
+});
+
 export {
   registerUser,
   loginUser,
@@ -263,4 +270,5 @@ export {
   isUserloggedIn,
   fetchUserHiringHistory,
   resetPassword,
+  getAllUsers,
 };

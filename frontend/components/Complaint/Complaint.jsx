@@ -1,50 +1,52 @@
 import React, { useState } from "react";
-import axios from "axios"; 
+// import axios from "axios"; 
 import './Complaint.css';
+import { API } from '../../src/api/axios';
 
 const Complaint = () => {
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-  const [file, setFile] = useState(null);
+  // const [file, setFile] = useState(null);
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+     e.preventDefault(); 
     setError("");
 
-    const maxSize = 2 * 1024 * 1024; // 2 MB
-    const allowedTypes = /(\.jpg|\.jpeg|\.png|\.pdf|\.doc|\.ppt|\.zip|\.mp3|\.mp4)$/i;
 
-    if (file) {
-      if (file.size > maxSize) {
-        setError(`File ${file.name} exceeds 2 MB.`);
-        return;
-      }
-      if (!allowedTypes.exec(file.name)) {
-        setError(`File type of ${file.name} is not allowed.`);
-        return;
-      }
-    }
+
+    // const maxSize = 2 * 1024 * 1024; // 2 MB
+    // const allowedTypes = /(\.jpg|\.jpeg|\.png|\.pdf|\.doc|\.ppt|\.zip|\.mp3|\.mp4)$/i;
+
+    // if (file) {
+    //   if (file.size > maxSize) {
+    //     setError(`File ${file.name} exceeds 2 MB.`);
+    //     return;
+    //   }
+    //   if (!allowedTypes.exec(file.name)) {
+    //     setError(`File type of ${file.name} is not allowed.`);
+    //     return;
+    //   }
+    // }
 
     const formData = new FormData();
     formData.append("subject", subject);
     formData.append("description", description);
-    if (file) {
-      formData.append("file", file);
-    }
+    // if (file) {
+    //   formData.append("file", file);
+    // }
 
     try {
-      const response = await axios.post('https://jsonplaceholder.typicode.com/posts', formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await API.post('/complaints/addComplaint', {
+                 subject:subject,
+                 description:description 
+                },);
 
       if (response.status === 201) { 
         alert("Ticket submitted successfully!");
         setSubject("");
         setDescription("");
-        setFile(null);
+        // setFile(null);
       } else {
         alert("Failed to submit the ticket.");
       }
@@ -53,6 +55,7 @@ const Complaint = () => {
       alert("Error submitting the ticket.");
     }
   };
+
 
   return (
     <div className="support-ticket container">
@@ -87,7 +90,7 @@ const Complaint = () => {
               required
             ></textarea>
           </div>
-          <div className="form-subject flex">
+          {/* <div className="form-subject flex">
             <label htmlFor="attachments" id="attachments-label">Attachments</label>
             <input 
               type="file" 
@@ -102,10 +105,10 @@ const Complaint = () => {
               types: .jpg, .jpeg, .png, .pdf, .doc, .ppt, .zip, .mp3, .mp4
             </p>
             {error && <p className="error-message" style={{ color: 'red' }}>{error}</p>}
-          </div>
+          </div> */}
           
           <div className="ticket-btn">
-            <button type="submit" className="primary-btn">SUBMIT</button>
+            <button type="submit" className="primary-btn" onClick={handleSubmit}>SUBMIT</button>
           </div>
         </form>
       </div>
